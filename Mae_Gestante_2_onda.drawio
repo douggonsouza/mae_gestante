@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-07T12:00:06.488Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="Vn2nJJFG00t2FQmrdFf8" version="21.6.6" type="github" pages="10">
+<mxfile host="app.diagrams.net" modified="2023-09-07T12:02:54.208Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="sutkT-4YkQ54DYDTC1L3" version="21.7.2" type="github" pages="10">
   <diagram name="Splash" id="SnSWdE3cnkkYb9gt4uQO">
-    <mxGraphModel dx="1378" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1364" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -633,7 +633,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Perfil" id="avlN21Lwitfdxyjf4LZ4">
-    <mxGraphModel dx="1378" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1364" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="ysoudCaHLKescwTQsPsj-0" />
         <mxCell id="ysoudCaHLKescwTQsPsj-1" parent="ysoudCaHLKescwTQsPsj-0" />
@@ -670,7 +670,7 @@
         <mxCell id="ysoudCaHLKescwTQsPsj-15" value="&lt;font color=&quot;#fff4ff&quot;&gt;Cadastro&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;shadow=0;dashed=0;fontSize=10;align=left;fillColor=#F5BFE9;strokeColor=none;fontColor=#FFFFFF;rotation=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="ysoudCaHLKescwTQsPsj-14" vertex="1">
           <mxGeometry x="13" width="172" height="16.88" as="geometry" />
         </mxCell>
-        <UserObject label="" link="data:page/id,BIANiUHFErxnDz7vMMGn" id="ysoudCaHLKescwTQsPsj-16">
+        <UserObject label="" link="data:page/id,qCZ3eRasGXgaiYmvCPpY" id="ysoudCaHLKescwTQsPsj-16">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;rotation=0;fillColor=#F5BFE9;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="ysoudCaHLKescwTQsPsj-14" vertex="1">
             <mxGeometry width="12.8" height="16.88" as="geometry" />
           </mxCell>
