@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-09T18:54:16.132Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="fXCIQFqXk1GOh_h031Ox" version="21.7.4" type="github" pages="17">
+<mxfile host="app.diagrams.net" modified="2023-09-09T18:56:03.545Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="D2r0jvSkiGW-ISUwuDZb" version="21.7.4" type="github" pages="17">
   <diagram name="Home" id="I-dmwQd22G39MFYdHWan">
     <mxGraphModel dx="1211" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2346,7 +2346,7 @@
           </mxCell>
         </UserObject>
         <UserObject label="Contato" id="UagFeSEEBPD8-3AWeEUB-8">
-          <mxCell style="fillColor=none;strokeColor=none;fontSize=12;fontColor=#997DA4;align=center;container=0;" vertex="1" parent="UagFeSEEBPD8-3AWeEUB-0">
+          <mxCell style="fillColor=none;strokeColor=none;fontSize=12;fontColor=#F5BFE9;align=center;container=0;" vertex="1" parent="UagFeSEEBPD8-3AWeEUB-0">
             <mxGeometry x="397.00000000000045" y="1.6299999999999955" width="70" height="22" as="geometry" />
           </mxCell>
         </UserObject>
@@ -2499,7 +2499,7 @@
           </mxGeometry>
         </mxCell>
         <UserObject label="Sobre" id="eXzDz0b5PNTXeBKnc6dx-7">
-          <mxCell style="fillColor=none;strokeColor=none;fontSize=12;fontColor=#997DA4;align=center;container=0;" vertex="1" parent="eXzDz0b5PNTXeBKnc6dx-0">
+          <mxCell style="fillColor=none;strokeColor=none;fontSize=12;fontColor=#F5BFE9;align=center;container=0;" vertex="1" parent="eXzDz0b5PNTXeBKnc6dx-0">
             <mxGeometry x="341.00000000000045" y="1.6299999999999955" width="70" height="22" as="geometry" />
           </mxCell>
         </UserObject>
