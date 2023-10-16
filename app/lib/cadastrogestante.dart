@@ -1,41 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
-import 'myhome.dart';
+import 'mylogin.dart';
 
-// const supabaseUrl = 'https://dztvpwxvtwduzpymjgxp.supabase.co';
-// const supabaseKey = String.fromEnvironment('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR6dHZwd3h2dHdkdXpweW1qZ3hwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQyNTg1MzgsImV4cCI6MjAwOTgzNDUzOH0.3GCGNxJWtET2ScYWzS5_hl1CcHL2fCZB-LwQUmJjORQ');
-
-class Login extends StatefulWidget  {
-  const Login({super.key, required this.title});
+class Cadastrogestante extends StatefulWidget  {
+  const Cadastrogestante({super.key, required this.title});
 
   final String title;
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Cadastrogestante> createState() => _CadastrogestanteState();
 }
 
-class _LoginState extends State<Login> {
-  
-  final emailController = TextEditingController();
-  final passwordController = TextEditingController();
+class _CadastrogestanteState extends State<Cadastrogestante> {
 
+  String nome = '';
   String email = '';
   String password = '';
-
-  // Get a reference your Supabase client
-  final supabase = Supabase.instance.client;
-
-  void logIn ()
-  {
-    // Get a reference your Supabase client
-    final PostgrestTransformBuilder<dynamic> response = supabase.from('users').select('*').eq('email', email).single();
-    // final ulist = response as List<dynamic>;
-    // print(ulist);
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const MyHome()),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +30,16 @@ class _LoginState extends State<Login> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              const Text(
+                'Nome:'
+              ),
+              TextField(
+                onChanged: (value) {
+                  nome = value;
+                },
+                autofocus: true,
+                keyboardType: TextInputType.text, 
+              ),
               const Text(
                 'E-Mail:'
               ),
@@ -73,9 +62,12 @@ class _LoginState extends State<Login> {
               ),
               TextButton(
                 onPressed: () => {
-                  logIn()
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MyLogin()),
+                  )
                 },
-                child: const Text('Entrar')
+                child: const Text('Cadastrar')
               ),
             ],
           ),
