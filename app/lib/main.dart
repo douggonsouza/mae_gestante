@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'myhome.dart';
+import 'mylogin.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +15,7 @@ void main() {
 
   runApp(const MaterialApp(
     title: 'Navigation Basics',
-    home: MyHome(),
+    home: MyLogin(),
   ));
 }
 
