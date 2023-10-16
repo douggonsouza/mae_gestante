@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:http/http.dart' as http;
 import 'myhome.dart';
+
+const String site = 'https://dztvpwxvtwduzpymjgxp.supabase.co/rest/v1/users';
+const String apikey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR6dHZwd3h2dHdkdXpweW1qZ3hwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQyNTg1MzgsImV4cCI6MjAwOTgzNDUzOH0.3GCGNxJWtET2ScYWzS5_hl1CcHL2fCZB-LwQUmJjORQ';
 
 // Get a reference your Supabase client
 final supabase = Supabase.instance.client;
@@ -20,19 +24,24 @@ class _CadastrogestanteState extends State<Cadastrogestante> {
   String email = '';
   String password = '';
 
-  void cadastrar ()
+  void cadastrar () async
   {
-    final _future =  supabase
-    .from('users')
-    .insert({'name': name, 'email': email, 'password': password});
+    Map<String, String> dd = {
+      'name': name,
+      'email': email,
+      'password': password,
+    };
 
-    if(_future != null){
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const MyHome()),
-      );
-    }
-    
+    Map<String, String> header = {};
+    header["apikey"] =  apikey;
+
+    var client = http.Client();
+    final responde = await client.post(Uri.parse(site), headers: header, body: dd);
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const MyHome()),
+    );
   }
 
   @override
@@ -57,7 +66,7 @@ class _CadastrogestanteState extends State<Cadastrogestante> {
                   name = value;
                 },
                 autofocus: true,
-                keyboardType: TextInputType.text, 
+                keyboardType: TextInputType.text,
               ),
               const Text(
                 'E-Mail:'
@@ -67,7 +76,7 @@ class _CadastrogestanteState extends State<Cadastrogestante> {
                   email = value;
                 },
                 autofocus: true,
-                keyboardType: TextInputType.emailAddress, 
+                keyboardType: TextInputType.emailAddress,
               ),
               const Text(
                 'Senha'
