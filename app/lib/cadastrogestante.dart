@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'mylogin.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import 'myhome.dart';
+
+// Get a reference your Supabase client
+final supabase = Supabase.instance.client;
 
 class Cadastrogestante extends StatefulWidget  {
   const Cadastrogestante({super.key, required this.title});
@@ -12,9 +16,24 @@ class Cadastrogestante extends StatefulWidget  {
 
 class _CadastrogestanteState extends State<Cadastrogestante> {
 
-  String nome = '';
+  String name = '';
   String email = '';
   String password = '';
+
+  void cadastrar ()
+  {
+    final _future =  supabase
+    .from('users')
+    .insert({'name': name, 'email': email, 'password': password});
+
+    if(_future != null){
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const MyHome()),
+      );
+    }
+    
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +54,7 @@ class _CadastrogestanteState extends State<Cadastrogestante> {
               ),
               TextField(
                 onChanged: (value) {
-                  nome = value;
+                  name = value;
                 },
                 autofocus: true,
                 keyboardType: TextInputType.text, 
@@ -62,10 +81,7 @@ class _CadastrogestanteState extends State<Cadastrogestante> {
               ),
               TextButton(
                 onPressed: () => {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MyLogin()),
-                  )
+                  cadastrar()
                 },
                 child: const Text('Cadastrar')
               ),

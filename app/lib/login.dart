@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'myhome.dart';
 
-// const supabaseUrl = 'https://dztvpwxvtwduzpymjgxp.supabase.co';
-// const supabaseKey = String.fromEnvironment('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR6dHZwd3h2dHdkdXpweW1qZ3hwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQyNTg1MzgsImV4cCI6MjAwOTgzNDUzOH0.3GCGNxJWtET2ScYWzS5_hl1CcHL2fCZB-LwQUmJjORQ');
+// Get a reference your Supabase client
+final supabase = Supabase.instance.client;
 
 class Login extends StatefulWidget  {
   const Login({super.key, required this.title});
@@ -15,26 +15,23 @@ class Login extends StatefulWidget  {
 }
 
 class _LoginState extends State<Login> {
-  
-  final emailController = TextEditingController();
-  final passwordController = TextEditingController();
 
   String email = '';
   String password = '';
 
-  // Get a reference your Supabase client
-  final supabase = Supabase.instance.client;
-
   void logIn ()
   {
-    // Get a reference your Supabase client
-    final PostgrestTransformBuilder<dynamic> response = supabase.from('users').select('*').eq('email', email).single();
-    // final ulist = response as List<dynamic>;
-    // print(ulist);
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const MyHome()),
-    );
+    final _future = supabase.from('users')
+      .select<List<Map<String, dynamic>>>('*')
+      .eq('email', 'douggonsouza@gmail.com');
+
+    if(_future != null){
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const MyHome()),
+      );
+    }
+    
   }
 
   @override
